@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 </head>
 <body>
     <header>
@@ -26,10 +27,10 @@
                             <a class="nav-link text-dark" asp-area="" asp-page="/Index"><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp;Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy"><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp;Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy"><i class="fas fa-fingerprint" aria-hidden="true"></i>&nbsp;Privacy</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/About"><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp;About</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/About"><i class="fa fa-info fa-fw" aria-hidden="true"></i>&nbsp;About</a>
                         </li>
                     </ul>
                     <partial name="_LoginPartial" />
@@ -37,12 +38,12 @@
                 </div>
                 @if (SignInManager.IsSignedIn(User))
                 {
-            <a class="nav-link text-dark"><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp;@User.Identity.Name</a>
+            <a class="nav-link text-dark"><i class="fa fa-user-circle fa-fw" aria-hidden="true"></i>&nbsp;@User.Identity.Name</a>
                 }
                 else
                 {
-                    <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register"><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp;Register</a>
-                    <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login"><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp;Login</a>
+                    <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register"><i class="fa fa-user-plus fa-fw" aria-hidden="true"></i>&nbsp;Register</a>
+                    <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>&nbsp;Login</a>
                 }
             </div>
         </nav>

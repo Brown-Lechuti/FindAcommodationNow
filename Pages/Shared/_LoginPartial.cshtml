@@ -6,11 +6,11 @@
     @if (SignInManager.IsSignedIn(User))
     {
         <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Residence" title="Residences"><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp;Apply now</a>
+            <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Residence" title="Residences"><i class="fas fa-bed fa-fw" aria-hidden="true"></i>&nbsp;Book now</a>
         </li>
         <li class="nav-item">
             <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
-                <button type="submit" class="nav-link btn btn-link text-dark"><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp;Logout</button>
+                <button type="submit" class="nav-link btn btn-link text-dark"><i class="fas fa-power-off fa-fw" aria-hidden="true"></i>&nbsp;Logout</button>
             </form>
         </li>
 @*        <li class="nav-item">
