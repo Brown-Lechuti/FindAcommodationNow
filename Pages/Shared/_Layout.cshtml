@@ -6,15 +6,15 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] -FindAcommodationNow</title>
+    <title>@ViewData["Title"]-FindAcommodationNow</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3" style="background-color: lightslategrey;">
+    <header style=" position: sticky; top: 0;">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3" style="background-color:white">
             <div class="container">
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -38,32 +38,34 @@
                 </div>
                 @if (SignInManager.IsSignedIn(User))
                 {
-            <a class="nav-link text-dark"><i class="fa fa-user-circle fa-fw" aria-hidden="true"></i>&nbsp;@User.Identity.Name</a>
+            <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Residence" title="Residences"><i class="fas fa-bed fa-fw" aria-hidden="true"></i>&nbsp;Book now</a>
+                    <a class="nav-link text-dark"><i class="fa fa-user-circle fa-fw" aria-hidden="true"></i>&nbsp;@User.Identity.Name</a>
                 }
                 else
                 {
-                    <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register"><i class="fa fa-user-plus fa-fw" aria-hidden="true"></i>&nbsp;Register</a>
+            <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register"><i class="fa fa-user-plus fa-fw" aria-hidden="true"></i>&nbsp;Register</a>
                     <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>&nbsp;Login</a>
                 }
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
-    <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2021 - brownlechuti - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
         </div>
-    </footer>
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+        <footer class="border-top footer text-muted">
+            <div class="container">
+                &copy; 2021 - Brown Lechuti Inc. - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            </div>
+        </footer>
 
-    @await RenderSectionAsync("Scripts", required: false)
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+
+        @await RenderSectionAsync("Scripts", required: false)
+
 </body>
 </html>

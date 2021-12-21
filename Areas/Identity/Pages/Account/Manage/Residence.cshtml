@@ -8,14 +8,32 @@
 <section>
     <h6>Select res </h6>
     <div class="navbar-nav">
-        <select>
-            <optgroup label="Names of residences" style="width:inherit">
-                <option value="city">City</option>
-                <option value="clever">Clever res</option>
-                <option value="vaalians">Vaalians</option>
-                <option value="bees">Bees</option>
-            </optgroup> 
+        <select id="_select">
+            <optgroup label="Private residences" style="width:inherit">
+                @*<option value="default">None selected</option>*@
+                <option value="res1">Residence 1</option>
+                <option value="res2">Residence 2</option>
+                <option value="res3">Residence 3</option> 
+                <option value="res4">Residence 4</option>
+            </optgroup>
         </select>
     </div>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdzpzapqk-F0qkVKi2vVohzohbU7mtW0BvLv0bWvWPcRXnbpw/viewform?embedded=true" width="600" height="838" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    @*<div class="navbar-nav">
+        <div class="row">
+            <div class="col container">
+                <div class="col-10">
+                    @foreach (var items in Model.ImageList)
+                    {
+                        var iPhotoUrl = items;
+                        <img class="float-left p-2" src="@iPhotoUrl" height="150" />
+
+                    }
+                </div>
+            </div>
+        </div>
+       </div> *@
+    <br />
+    <div class="navbar-nav">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdzpzapqk-F0qkVKi2vVohzohbU7mtW0BvLv0bWvWPcRXnbpw/viewform?embedded=true" style="width:inherit" height="838" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
 </section>
