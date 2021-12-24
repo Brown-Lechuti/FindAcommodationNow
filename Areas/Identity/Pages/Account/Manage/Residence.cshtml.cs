@@ -17,6 +17,7 @@ namespace FindAcommodationNow.Areas.Identity.Pages.Account.Manage
         public void OnGet()
         {
         }
+        
         /* private IConfiguration _configuration;
          private readonly UserManager<IdentityUser> _userManager;
          private readonly SignInManager<IdentityUser> _signInManager;
@@ -33,7 +34,7 @@ namespace FindAcommodationNow.Areas.Identity.Pages.Account.Manage
          {
              string userid = User.Identity.Name;
              string newString = userid.Replace("@", string.Empty);
-             string uniqueContiner_ = newString.Replace(".", string.Empty);
+             string uniqueContiner_ = newString.Replace(".", string.Empty); 
 
              BlobContinuationToken continuationToken = null;
              string blobstorageconnection = "DefaultEndpointsProtocol=https;AccountName=storebbl;AccountKey=0i1Fv/O3avNyTTehyTKqGcQjmuyivvDT6H9gNCx8dCmIZGNfPIqCeoIPANXTDW+WuvFqoq3pEGnjyFW7eKtmzA==;EndpointSuffix=core.windows.net";
@@ -55,6 +56,7 @@ namespace FindAcommodationNow.Areas.Identity.Pages.Account.Manage
                  var blob = (CloudBlockBlob)blobItem;
                 /// blob.Properties.ContentType = "image/jpeg";
                  _ = blob.SetPropertiesAsync();
+                if (blobItem.GetType() == typeof(CloudBlobDirectory)
                  ImageList.Add($"{blob.Uri}");
 
              }
