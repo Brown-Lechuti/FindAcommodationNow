@@ -11,7 +11,6 @@
         <div class="navbar-nav" id="nav_">
             <select id="_select">
                 <optgroup label="Private residences" style="width:inherit">
-                    @*<option value="default">None selected</option>*@
                     <option value="res1">Residence 1</option>
                     <option value="res2">Residence 2</option>
                     <option value="res3">Residence 3</option>
@@ -44,24 +43,28 @@
                 background-color: #777;
                 color: white;
                 cursor: pointer;
-                padding: 18px;
+                padding: 7px;
                 width: 100%;
                 border: none;
                 text-align: left;
-                outline: none;
+                outline:double;
                 font-size: 15px;
+                background-color: #1b6ec2;
+                border-color: #1861ac;
+                
+
             }
 
                 .active, .collapsible:hover {
-                    background-color: #555;
+                    background-color: dodgerblue;
                 }
 
             .content {
-                padding: 0 18px;
+                padding: 0 10px;
                 max-height: 0;
                 overflow: hidden;
                 transition: max-height 0.2s ease-out;
-                background-color: #f1f1f1;
+                background-color:transparent;
             }
             .collapsible:after {
                 content: '\02795'; /* Unicode character for "plus" sign (+) */
@@ -77,21 +80,41 @@
         </style>
 
         <h4>Res pictures</h4>
-
-        @*            <p>A Collapsible:</p>
+        @*
+        <p>A Collapsible:</p>
         <button class="collapsible">Open Collapsible</button>
         <div class="content">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>*@
 
         <p>Grouped pictures</p>
-        <button class="collapsible">Bedroom</button>
+        <button class="collapsible" id="pics_group">Bedroom</button>
         <div class="content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <div class="row">
+                <div class="col container">
+                    <div class="col-10">
+                        <img class="float-left p-2" src="/bg.jpg" height="150" />
+                        <img class="float-left p-2" src="/352.jpg" height="150" />
+                        <img class="float-left p-2" src="/389.png" height="150" />
+                        <img class="float-left p-2" src="/683.jpg" height="150" />
+                        <img class="float-left p-2" src="/456.jpg" height="150" />
+                    </div>
+                </div>
+            </div>
         </div>
         <button class="collapsible">Bathroom</button>
         <div class="content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <div class="row">
+                <div class="col container">
+                    <div class="col-10">
+                        @foreach (var items in Model.ImageList)
+                        {
+                            var iPhotoUrl = items;
+                            <img class="float-left p-2" src="@iPhotoUrl" height="150" />
+                        }
+                    </div>
+                </div>
+            </div>
         </div>
         <button class="collapsible">Kitchen</button>
         <div class="content">
