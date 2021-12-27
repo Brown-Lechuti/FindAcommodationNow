@@ -13,12 +13,13 @@ namespace FindAcommodationNow.Areas.Identity.Pages.Account.Manage
 {
     public class ResidenceModel : PageModel
     {
-        /*        private readonly UserManager<IdentityUser> _userManager;
+              private readonly UserManager<IdentityUser> _userManager;
                 private readonly SignInManager<IdentityUser> _signInManager;
 
                 public void OnGet()
                 {
-                }
+                }  
+        /*
 
                 //
                  <div class="row">
@@ -34,7 +35,8 @@ namespace FindAcommodationNow.Areas.Identity.Pages.Account.Manage
                  </div>
         */
 
-        private IConfiguration _configuration;
+/* */       
+        /* private IConfiguration _configuration;
         private readonly UserManager<IdentityUser> _userManager;
         private readonly SignInManager<IdentityUser> _signInManager;
 
@@ -44,7 +46,7 @@ namespace FindAcommodationNow.Areas.Identity.Pages.Account.Manage
         }
 
 
-        [BindProperty]
+       [BindProperty]
         public List<string> ImageList { get; set; }
         public async Task<IActionResult> OnGetAsync()
         {
@@ -77,7 +79,7 @@ namespace FindAcommodationNow.Areas.Identity.Pages.Account.Manage
             }
 
             return Page();
-        }
+        }*/
 
 
     }
