@@ -20,8 +20,15 @@
                 </div>
                 <div class="form-group">
                     <label asp-for="Input.Password"></label>
-                    <input asp-for="Input.Password" class="form-control" />
+                    <input asp-for="Input.Password" class="form-control" type="password" id="myPass" />
                     <span asp-validation-for="Input.Password" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" onclick="funcPass()" />
+                        </label> Show password
+                    </div>
                 </div>
                 <div class="form-group">
                     <div class="checkbox">

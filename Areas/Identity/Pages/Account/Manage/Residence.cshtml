@@ -4,223 +4,226 @@
     ViewData["Title"] = "Residences";
     ViewData["ActivePage"] = ManageNavPages.Residence;
 }
-<h4>@ViewData["Title"]</h4>
+<div style="background-color:white">
+    <h4>@ViewData["Title"]</h4>
 
-<section>
-    <h6>Select res </h6>
-    <div class="navbar-nav" id="nav_">
-        <select id="_select">
-            <optgroup label="Private residences" style="width:inherit">
-                <option value="res1">Residence 1</option>
-                <option value="res2">Residence 2</option>
-                <option value="res3">Residence 3</option>
-                <option value="res4">Residence 4</option>
-            </optgroup>
-        </select>
-    </div>
-    @*<div class="navbar-nav">
-                    <!DOCTYPE html>
-        <html>
-        <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <style>
-        .responsive {
-          width: 100%;
-          height: auto;
-        }
-        </style>
-        </head>
-        <body>
+    <section>
+        <h6>Select res </h6>
+        <div class="navbar-nav" id="nav_">
+            <select id="_select">
+                <optgroup label="Private residences" style="width:inherit">
+                    <option value="none">None selected</option>
+                    <option value="res1">Residence 1</option>
+                    <option value="res2">Residence 2</option>
+                    <option value="res3">Residence 3</option>
+                    <option value="res4">Residence 4</option>
+                </optgroup>
+            </select>
+        </div>
+        @*<div class="navbar-nav">
+                        <!DOCTYPE html>
+            <html>
+            <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <style>
+            .responsive {
+              width: 100%;
+              height: auto;
+            }
+            </style>
+            </head>
+            <body>
 
-        <h2>Responsive Images</h2>
+            <h2>Responsive Images</h2>
 
-        <p>If you want the image to scale both up and down on responsiveness, set the CSS width property to 100% and height to auto.</p>
-        <p>Resize the browser window to see the effect.</p>
+            <p>If you want the image to scale both up and down on responsiveness, set the CSS width property to 100% and height to auto.</p>
+            <p>Resize the browser window to see the effect.</p>
 
-        <img src="img_nature.jpg" alt="Nature" class="responsive" width="600" height="400">
+            <img src="img_nature.jpg" alt="Nature" class="responsive" width="600" height="400">
 
-        </body>
-        </html>
+            </body>
+            </html>
 
-                 <div class="row">
-                     <div class="col container">
-                         <div class="col-10">
-                             @foreach (var items in Model.ImageList)
-                             {
-                                 var iPhotoUrl = items;
-                                 <img class="float-left p-2" src="@iPhotoUrl" height="150" />
-                             }
+                     <div class="row">
+                         <div class="col container">
+                             <div class="col-10">
+                                 @foreach (var items in Model.ImageList)
+                                 {
+                                     var iPhotoUrl = items;
+                                     <img class="float-left p-2" src="@iPhotoUrl" height="150" />
+                                 }
+                             </div>
                          </div>
                      </div>
-                 </div>
-                </div> *@
-    <br />
+                    </div> *@
+        <br />
 
-    <div class="top-navbar">
+        <div class="top-navbar">
 
-        <style>
-            .collapsible {
-                background-color: #777;
-                color: white;
-                cursor: pointer;
-                padding: 7px;
-                width: 100%;
-                border: none;
-                text-align: left;
-                outline: double;
-                font-size: 15px;
-                background-color: #1b6ec2;
-                border-color: #1861ac;
-            }
-
-                .active, .collapsible:hover {
-                    background-color: dodgerblue;
+            <style>
+                .collapsible {
+                    background-color: #777;
+                    color: white;
+                    cursor: pointer;
+                    padding: 7px;
+                    width: 100%;
+                    border: none;
+                    text-align: left;
+                    outline: double;
+                    font-size: 15px;
+                    background-color: #1b6ec2;
+                    border-color: #1861ac;
                 }
 
-            .content {
-                padding: 0 10px;
-                max-height: 0;
-                overflow: hidden;
-                transition: max-height 0.2s ease-out;
-                background-color: transparent;
-            }
+                    .active, .collapsible:hover {
+                        background-color: dodgerblue;
+                    }
 
-            .collapsible:after {
-                content: '\02795'; /* Unicode character for "plus" sign (+) */
-                font-size: 13px;
-                color: white;
-                float: right;
-                margin-left: 5px;
-            }
+                .content {
+                    padding: 0 10px;
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: max-height 0.2s ease-out;
+                    background-color: transparent;
+                }
 
-            .active:after {
-                content: "\2796"; /* Unicode character for "minus" sign (-) */
-            }
-        </style>
+                .collapsible:after {
+                    content: '\02795'; /* Unicode character for "plus" sign (+) */
+                    font-size: 13px;
+                    color: white;
+                    float: right;
+                    margin-left: 5px;
+                }
 
-        <h4>Res pictures</h4>
-        @*
-            <p>A Collapsible:</p>
-            <button class="collapsible">Open Collapsible</button>
+                .active:after {
+                    content: "\2796"; /* Unicode character for "minus" sign (-) */
+                }
+            </style>
+
+            <h4>Res pictures</h4>
+            @*
+                <p>A Collapsible:</p>
+                <button class="collapsible">Open Collapsible</button>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>*@
+
+            <p>Grouped pictures</p>
+            <button class="collapsible" id="pics_group">Bedroom</button>
+            <div class="content">
+                <div class="row">
+                    <div class="col container">
+                        <div class="col-10">
+                            <img class="float-left p-2" src="/bg.jpg" height="150" />
+                            <img class="float-left p-2" src="/352.jpg" height="150" />
+                            <img class="float-left p-2" src="/389.png" height="150" />
+                            <img class="float-left p-2" src="/683.jpg" height="150" />
+                            <img class="float-left p-2" src="/456.jpg" height="150" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="collapsible">Bathroom</button>
+            <div class="content">
+                @*            <div class="row">
+                        <div class="col container">
+                            <div class="col-10">
+                                @foreach (var items in Model.ImageList)
+                                {
+                                    var iPhotoUrl = items;
+                                    <img class="float-left p-2" src="@iPhotoUrl" height="150" />
+                                }
+                            </div>
+                        </div>
+                    </div>*@
+            </div>
+            <button class="collapsible">Kitchen</button>
             <div class="content">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>*@
-
-        <p>Grouped pictures</p>
-        <button class="collapsible" id="pics_group">Bedroom</button>
-        <div class="content">
-            <div class="row">
-                <div class="col container">
-                    <div class="col-10">
-                        <img class="float-left p-2" src="/bg.jpg" height="150" />
-                        <img class="float-left p-2" src="/352.jpg" height="150" />
-                        <img class="float-left p-2" src="/389.png" height="150" />
-                        <img class="float-left p-2" src="/683.jpg" height="150" />
-                        <img class="float-left p-2" src="/456.jpg" height="150" />
-                    </div>
-                </div>
             </div>
-        </div>
-        <button class="collapsible">Bathroom</button>
-        <div class="content">
-@*            <div class="row">
-                <div class="col container">
-                    <div class="col-10">
-                        @foreach (var items in Model.ImageList)
-                        {
-                            var iPhotoUrl = items;
-                            <img class="float-left p-2" src="@iPhotoUrl" height="150" />
+            <button class="collapsible">Study room/space</button>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <button class="collapsible">Outdoors</button>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <script>
+                var coll = document.getElementsByClassName("collapsible");
+                var i;
+
+                for (i = 0; i < coll.length; i++) {
+                    coll[i].addEventListener("click", function () {
+
+                        // here we are gonna loop through the elements
+                        for (item of coll) {
+                            // and remove .active class on the button
+                            item.classList.remove("active");
+
+                            // here we are checking the next element and making it don't display
+                            item.nextElementSibling.style.maxHeight = null;
                         }
-                    </div>
-                </div>
-            </div>*@
+                        this.classList.toggle("active");
+                        var content = this.nextElementSibling;
+                        if (content.style.maxHeight) {
+                            content.style.maxHeight = null;
+                        } else {
+                            content.style.maxHeight = content.scrollHeight + "px";
+                        }
+                    });
+                }
+            </script>
         </div>
-        <button class="collapsible">Kitchen</button>
-        <div class="content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-        <button class="collapsible">Study room/space</button>
-        <div class="content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-        <button class="collapsible">Outdoors</button>
-        <div class="content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-        <script>
-            var coll = document.getElementsByClassName("collapsible");
-            var i;
 
-            for (i = 0; i < coll.length; i++) {
-                coll[i].addEventListener("click", function () {
-
-                    // here we are gonna loop through the elements
-                    for (item of coll) {
-                        // and remove .active class on the button
-                        item.classList.remove("active");
-
-                        // here we are checking the next element and making it don't display
-                        item.nextElementSibling.style.maxHeight = null;
-                    }
-                    this.classList.toggle("active");
-                    var content = this.nextElementSibling;
-                    if (content.style.maxHeight) {
-                        content.style.maxHeight = null;
-                    } else {
-                        content.style.maxHeight = content.scrollHeight + "px";
-                    }
-                });
-            }
-        </script>
-    </div>
-
-    <main id="myContainer" class="MainContainer">
-        <header class="MainHeader">
-            <div class="css-script-ads" style="margin:30px auto" align="center">
-                <script type="text/javascript">
+        <main id="myContainer" class="MainContainer">
+            <header class="MainHeader">
+                <div class="css-script-ads" style="margin:30px auto" align="center">
+                    <script type="text/javascript">
 <!--
-                    google_ad_client = "ca-pub-2783044520727903";
-                    /* CSSScript Demo Page */
-                    google_ad_slot = "3025259193";
-                    google_ad_width = inherit;
-                    google_ad_height = inherit;
-                    //-->
-                </script>
-                <script type="text/javascript"
-                        src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-                </script>
-            </div>
-        </header>
+                        google_ad_client = "ca-pub-2783044520727903";
+                        /* CSSScript Demo Page */
+                        google_ad_slot = "3025259193";
+                        google_ad_width = inherit;
+                        google_ad_height = inherit;
+                        //-->
+                    </script>
+                    <script type="text/javascript"
+                            src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+                    </script>
+                </div>
+            </header>
 
-        <!-- Open The Modal -->
-        <button id="myBtn" class="btn btn-primary">Apply</button>
-    </main>
+            <!-- Open The Modal -->
+            <button id="myBtn" class="btn btn-primary">Apply</button>
+        </main>
 
-    <!-- Modal container it includes the overlay -->
+        <!-- Modal container it includes the overlay -->
 
-    <div id="myModal" class="Modal is-hidden is-visuallyHidden">
-        <!-- Modal content -->
-        <div class="Modal-content">
-            <span id="closeModal" class="Close">&times;</span>
-            <h3>Lease agreement</h3>
-            <div class="navbar-nav">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdzpzapqk-F0qkVKi2vVohzohbU7mtW0BvLv0bWvWPcRXnbpw/viewform?embedded=true" style="width:300px;height:700px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        <div id="myModal" class="Modal is-hidden is-visuallyHidden">
+            <!-- Modal content -->
+            <div class="Modal-content">
+                <span id="closeModal" class="Close">&times;</span>
+                <h3>Lease agreement</h3>
+                <div class="navbar-nav">
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdzpzapqk-F0qkVKi2vVohzohbU7mtW0BvLv0bWvWPcRXnbpw/viewform?embedded=true" style="width:300px;height:700px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                </div>
             </div>
         </div>
-    </div>
 
-    <script src="js/app.min.js"></script>
-    <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date(); a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        <script src="js/app.min.js"></script>
+        <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-        ga('create', 'UA-46156385-1', 'cssscript.com');
-        ga('send', 'pageview');
+            ga('create', 'UA-46156385-1', 'cssscript.com');
+            ga('send', 'pageview');
 
-    </script>
+        </script>
 
-</section>
+    </section>
+</div>
