@@ -13,30 +13,31 @@ namespace FindAcommodationNow.Areas.Identity.Pages.Account.Manage
 {
     public class ResidenceModel : PageModel
     {
-              private readonly UserManager<IdentityUser> _userManager;
-                private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly UserManager<IdentityUser> _userManager;
+        private readonly SignInManager<IdentityUser> _signInManager;
 
-                public void OnGet()
-                {
-                }  
-        /*
+        public void OnGet()
+        {
+        }
 
-                //
-                 <div class="row">
-                     <div class="col container">
-                         <div class="col-10">
-                             @foreach (var items in Model.ImageList)
-                             {
-                                 var iPhotoUrl = items;
-                                 <img class="float-left p-2" src="@iPhotoUrl" height="150" />
-                             }
-                         </div>
-                     </div>
-                 </div>
-        */
+        private string SelectedRes() 
+        {
+            string resContainer = "";
+            var res = Request.Form["res"];
+            resContainer = res.ToString();
+            return resContainer;
+        }
+/*        private void CallContainer(string resName,string picCategory)
+        {
+            string containerCalled = resName + picCategory;
 
-/* */       
-        /* private IConfiguration _configuration;
+
+        }*/
+        //
+
+
+
+ /*     private IConfiguration _configuration;
         private readonly UserManager<IdentityUser> _userManager;
         private readonly SignInManager<IdentityUser> _signInManager;
 
@@ -46,12 +47,13 @@ namespace FindAcommodationNow.Areas.Identity.Pages.Account.Manage
         }
 
 
-       [BindProperty]
+        [BindProperty]
         public List<string> ImageList { get; set; }
-        public async Task<IActionResult> OnGetAsync()
+        public async Task<IActionResult> OnPostAsync()
         {
             string userid = User.Identity.Name;
             string newString = userid.Replace("@", string.Empty);
+
             string uniqueContiner_ = "brownlechutigmailcom";
 
             BlobContinuationToken continuationToken = null;
@@ -74,7 +76,7 @@ namespace FindAcommodationNow.Areas.Identity.Pages.Account.Manage
                 var blob = (CloudBlockBlob)blobItem;
                 /// blob.Properties.ContentType = "image/jpeg";
                 _ = blob.SetPropertiesAsync();
-                 ImageList.Add($"{blob.Uri}");
+                ImageList.Add($"{blob.Uri}");
 
             }
 

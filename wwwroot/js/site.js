@@ -2,17 +2,46 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
-
-var modal = document.getElementById("myModal"), body = document.getElementsByTagName("body"), container = document.getElementById("myContainer"), btnOpen = document.getElementById("myBtn"), btnClose = document.getElementById("closeModal"); btnOpen.onclick = function () { modal.className = "Modal is-visuallyHidden", setTimeout(function () { container.className = "MainContainer is-blurred", modal.className = "Modal" }, 100), container.parentElement.className = "ModalOpen" }, btnClose.onclick = function () { modal.className = "Modal is-hidden is-visuallyHidden", body.className = "", container.className = "container", container.parentElement.className = "" }, window.onclick = function (e) { e.target == modal && (modal.className = "Modal is-hidden", body.className = "", container.className = "container", container.parentElement.className = "") };
+/*
+var modal = document.getElementById("myModal_"),
+body = document.getElementsByTagName("body"),
+container = document.getElementById("myContainer"),
+btnOpen = document.getElementById("myBtn"), btnClose = document.getElementById("closeModal");
+btnOpen.onclick = function ()
+{
+    modal.className = "Modal is-visuallyHidden", setTimeout(function ()
+    { container.className = "MainContainer is-blurred", modal.className = "Modal" }, 100), container.parentElement.className = "ModalOpen"
+},
+    btnClose.onclick = function ()
+    {
+        modal.className = "Modal is-hidden is-visuallyHidden", body.className = "", container.className = "container", container.parentElement.className = ""
+    }, window.onclick = function (e) { e.target == modal && (modal.className = "Modal is-hidden", body.className = "", container.className = "container", container.parentElement.className = "") };
+*/
 var mbtn = document.getElementById("myBtn");
+var viewBtn = document.getElementById("viewBtn");
+
+function disableBtns() {
+    mbtn.hidden = true;
+    viewBtn.hidden = true;
+}
+function activeTab()
+{
+    
+    var label = $('#_select :selected').text();
+    return label;
+}
 
 $(document).ready(function () {
-
+    disableBtns();
     $('#_select').change(function () {
+        disableBtns();
         var coll = document.getElementsByClassName("collapsible");
         var i;
         var label = $('#_select :selected').text();
-
+        if (label != "Select residence") {
+            mbtn.hidden = false;
+            viewBtn.hidden = false
+        }
 
         for (i = 0; i < coll.length; i++)
         {
@@ -70,5 +99,33 @@ function funcPass()
     {
         input_.type = "password";
     }
+
+}
+
+// Get the modal
+
+
+var modal = document.getElementById("myModal");
+
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+
+var images = document.querySelectorAll('img');
+/*for (var i = 0, len = images.length; i < len; i++) {
+    images[i].addEventListener('click', openModal(this));
+}*/
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+    modal.style.display = "none";
+}
+
+function openModal(img) {
+    modal.style.display = "block";
+    modalImg.src = img.src;
+    captionText.innerHTML = activeTab();
 
 }

@@ -10,6 +10,8 @@ namespace FindAcommodationNow.Areas.Identity.Pages.Account.Manage
     {
         public static string Residence => "Residence";
         //
+        public static string Pictures => "Pictures";
+        //
         public static string Index => "Index";
 
         public static string Email => "Email";
@@ -27,6 +29,7 @@ namespace FindAcommodationNow.Areas.Identity.Pages.Account.Manage
         public static string TwoFactorAuthentication => "TwoFactorAuthentication";
         //
         public static string ResidenceNavClass(ViewContext viewContext) => PageNavClass(viewContext, Residence);
+        public static string PicturesNavClass(ViewContext viewContext) => PageNavClass(viewContext, Pictures);
         //
         public static string IndexNavClass(ViewContext viewContext) => PageNavClass(viewContext, Index);
 
