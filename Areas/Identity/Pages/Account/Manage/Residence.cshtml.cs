@@ -19,14 +19,23 @@ namespace FindAcommodationNow.Areas.Identity.Pages.Account.Manage
         public void OnGet()
         {
         }
+        /*        public async Task<IActionResult> OnPostAsync()
+                {
+                    return Page();
+                }*/
+   /*     private void MBtn_Click(object sender, EventArgs e)
+        { 
 
+        }
         private string SelectedRes() 
         {
             string resContainer = "";
             var res = Request.Form["res"];
+           // var n = Request.Form["mBtn"];
             resContainer = res.ToString();
+            
             return resContainer;
-        }
+        }*/
 /*        private void CallContainer(string resName,string picCategory)
         {
             string containerCalled = resName + picCategory;

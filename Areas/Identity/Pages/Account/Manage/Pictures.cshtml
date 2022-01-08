@@ -4,15 +4,41 @@
     ViewData["Title"] = "Pictures";
     ViewData["ActivePage"] = ManageNavPages.Pictures;
 }
-<h6>Select res </h6>
-<div class="navbar-nav" id="nav_">
-    <select id="_select" name="res">
-        <optgroup label="Private residences" style="width:inherit">
-            <option value="">Select residence</option>
-            <option value="1">Residence 1</option>
-            <option value="2">Residence 2</option>
-            <option value="3">Residence 3</option>
-            <option value="4">Residence 4</option>
-        </optgroup>
-    </select>
+<div style="background-color:white">
+    <h4>@ViewData["Title"]</h4>
+
+    <h6>Residence 5 pictures</h6>
+ 
+    <div class="top-navbar">
+
+        <div class="row" >
+
+            <!--@*                                   @foreach (var items in Model.ImageList)
+                {
+                    var iPhotoUrl = items;
+                    <img onclick="openModal(this);" id="myImg"  class="float-left p-2" src="@iPhotoUrl" alt="Snow" height="150"/>
+
+                    <div id="myModal" class="modal">
+                        <span class="close">&times;</span>
+                        <img class="modal-content" id="img01">
+                        <div id="caption"></div>
+                    </div>
+
+                }*@-->
+            <img onclick="openModal(this);" id="myImg" class="float-left p-2" src="/bg.jpg" alt="Snow" height="150" />
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img01">
+                <div id="caption"></div>
+            </div>
+            <img onclick="openModal(this);" id="myImg" class="float-left p-2" src="/352.jpg" alt="Snow" height="150" />
+            <img onclick="openModal(this);" id="myImg" class="float-left p-2" src="/389.png" alt="Snow" height="150" />
+            <img onclick="openModal(this);" id="myImg" class="float-left p-2" src="/683.jpg" alt="Snow" height="150" />
+            <img onclick="openModal(this);" id="myImg" class="float-left p-2" src="/456.jpg" alt="Snow" height="150" />
+
+        </div>
+
+    </div>
+
+
 </div>

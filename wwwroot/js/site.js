@@ -17,13 +17,40 @@ btnOpen.onclick = function ()
         modal.className = "Modal is-hidden is-visuallyHidden", body.className = "", container.className = "container", container.parentElement.className = ""
     }, window.onclick = function (e) { e.target == modal && (modal.className = "Modal is-hidden", body.className = "", container.className = "container", container.parentElement.className = "") };
 */
-var mbtn = document.getElementById("myBtn");
-var viewBtn = document.getElementById("viewBtn");
+var mbtn = document.getElementById("applyBtn");
+var res1Btn = document.getElementById("res1Btn");
+var res2Btn = document.getElementById("res2Btn");
+var res3Btn = document.getElementById("res3Btn");
+var res4Btn = document.getElementById("res4Btn");
+var res5Btn = document.getElementById("res5Btn");
+var pillsNav = document.getElementById("pillsNav");
+var rowNav = document.getElementById("rowNav");
 
-function disableBtns() {
-    mbtn.hidden = true;
-    viewBtn.hidden = true;
+
+var picsNav = document.getElementById("picsNav");
+var picTitle = document.getElementById("picTitle");
+
+function hideOtherBtns(showingBtn)
+{
+    
+    res1Btn.hidden = true;
+    res2Btn.hidden = true;
+    res3Btn.hidden = true;
+    res4Btn.hidden = true;
+    res5Btn.hidden = true;
+    showingBtn.hidden = false;
 }
+function hideContent() {
+    res1Btn.hidden = true;
+    res2Btn.hidden = true;
+    res3Btn.hidden = true;
+    res4Btn.hidden = true;
+    res5Btn.hidden = true;
+    mbtn.hidden = true;
+
+}
+
+
 function activeTab()
 {
     
@@ -32,62 +59,38 @@ function activeTab()
 }
 
 $(document).ready(function () {
-    disableBtns();
-    $('#_select').change(function () {
-        disableBtns();
-        var coll = document.getElementsByClassName("collapsible");
-        var i;
-        var label = $('#_select :selected').text();
-        if (label != "Select residence") {
+
+
+    $('#_select').change(function ()// when the user choose a specific res, show the btn for the res
+    {
+        hideContent();
+        var label = $('#_select :selected').val();
+        if (label != "0") {
+            if (label == "1") {
+                hideOtherBtns(res1Btn);
+            }
+            if (label == "2") {
+                hideOtherBtns(res2Btn);
+            }
+            if (label == "3") {
+                hideOtherBtns(res3Btn);
+            }
+            if (label == "4") {
+                hideOtherBtns(res4Btn);
+            }
+            if (label == "5") {
+                hideOtherBtns(res5Btn);
+            }
+
             mbtn.hidden = false;
-            viewBtn.hidden = false
+            mbtn.innerText = "Apply to " + $('#_select :selected').text();
         }
-
-        for (i = 0; i < coll.length; i++)
-        {
-                // here we are gonna loop through the elements
-                for (item of coll)
-                {
-                    // and remove .active class on the button
-                    item.classList.remove("active");
-
-                    // here we are checking the next element and making it don't display
-                    item.nextElementSibling.style.maxHeight = null;
-                }
-        }
-       
-        mbtn.innerText = "Apply to " + label;
-        activateClasses();
+           
     });
 
 });
 
-function activateClasses() {
 
-    var coll = document.getElementsByClassName("collapsible");
-    var i;
-
-    for (i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function () {
-
-            // here we are gonna loop through the elements
-            for (item of coll) {
-                // and remove .active class on the button
-                item.classList.remove("active");
-
-                // here we are checking the next element and making it don't display
-                item.nextElementSibling.style.maxHeight = null;
-            }
-            this.classList.toggle("active");
-            var content = this.nextElementSibling;
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
-            } else {
-                content.style.maxHeight = content.scrollHeight + "px";
-            }
-        });
-    }
-};
 
 function funcPass()
 {
