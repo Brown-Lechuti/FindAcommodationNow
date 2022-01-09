@@ -9,12 +9,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Blob;
 
+
 namespace FindAcommodationNow.Areas.Identity.Pages.Account.Manage
 {
     public class PicturesModel : PageModel
     {
-        private readonly UserManager<IdentityUser> _userManager;
-        private readonly SignInManager<IdentityUser> _signInManager;
 
         public void OnGet()
         {

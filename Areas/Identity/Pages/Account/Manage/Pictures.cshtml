@@ -1,19 +1,21 @@
 ﻿@page
-@model FindAcommodationNow.Areas.Identity.Pages.Account.Manage.PicturesModel
+@model PicturesModel
 @{
-    ViewData["Title"] = "Pictures";
+    ViewData["Title"] = "Residence 5";
     ViewData["ActivePage"] = ManageNavPages.Pictures;
-}
+} 
+
 <div style="background-color:white">
     <h4>@ViewData["Title"]</h4>
-
+    <form>
+        <button class="btn btn-primary" type="submit" asp-page="Residence">&lArr; Go back</button>
+    </form>
     <h6>Residence 5 pictures</h6>
- 
     <div class="top-navbar">
 
-        <div class="row" >
+        <div class="row">
 
-            <!--@*                                   @foreach (var items in Model.ImageList)
+        <!--@*@foreach (var items in Model.ImageList)
                 {
                     var iPhotoUrl = items;
                     <img onclick="openModal(this);" id="myImg"  class="float-left p-2" src="@iPhotoUrl" alt="Snow" height="150"/>
@@ -42,3 +44,6 @@
 
 
 </div>
+@section Scripts {
+<partial name="_ValidationScriptsPartial" />
+}
