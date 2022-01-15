@@ -163,3 +163,7 @@ btnClose.onclick = function () {
     container.className = "MainContainer";
     container.parentElement.className = "";
 }
+
+/*function growSize(icon) {
+    icon.size 
+}*/

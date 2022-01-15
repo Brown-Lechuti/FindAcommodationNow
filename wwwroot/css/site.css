@@ -238,4 +238,6 @@ body {
     } 
 }
 
-
+.imoji:hover, .imoji_:hover {
+    font-size:large;
+}
