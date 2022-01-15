@@ -7,25 +7,38 @@
 
 <div style="background-color:white">
     <h5>@ViewData["Title"]</h5>
+    <div id="_myModal" class="Modal is-hidden is-visuallyHidden">
+        <!-- Modal content -->
+        <div class="Modal-content">
+            <span id="closeModal" class="Close">&times;</span>
+            <h6>Booking 3</h6>
+            <hr />
+            <p>Simple Modalfvvhhhhhhhhh</p>
+            <p>Simple Modalfvv</p>
+            <p>Simple Modalfvv</p>
+            <p>Simple Modalfvv</p><p>Simple Modalfvv</p><p>Simple Modalfvv</p><p>Simple Modalfvv</p>
+        </div>
+    </div>
+    <button id="btnApply" class="btn btn-primary" type="submit"><i class="fa fa-check-square-o"> </i>Apply</button>
     <form>
-        <button class="btn btn-primary" type="submit"><i class="fa fa-check-square-o"> </i>Apply</button>
-        <button class="btn btn-primary" type="submit" asp-page="Residence" style="float: right;"><i class="fa fa-arrow-left"></i> Go back</button>
+        <br />
+        <button class="btn btn-primary" type="submit" asp-page="Residence"><i class="fa fa-arrow-left"></i> Go back</button>
     </form>
     <hr />
     <div class="top-navbar">
         <div class="row">
-        <!--@*@foreach (var items in Model.ImageList3)
-                {
-                    var iPhotoUrl = items;
-                    <img onclick="openModal(this);" id="myImg"  class="float-left p-2" src="@iPhotoUrl" alt="Snow" height="150"/>
+            <!--@*@foreach (var items in Model.ImageList3)
+                    {
+                        var iPhotoUrl = items;
+                        <img onclick="openModal(this);" id="myImg"  class="float-left p-2" src="@iPhotoUrl" alt="Snow" height="150"/>
 
-                    <div id="myModal" class="modal">
-                        <span class="close">&times;</span>
-                        <img class="modal-content" id="img01">
-                        <div id="caption"></div>
-                    </div>
+                        <div id="myModal" class="modal">
+                            <span class="close">&times;</span>
+                            <img class="modal-content" id="img01">
+                            <div id="caption"></div>
+                        </div>
 
-                }*@-->
+                    }*@-->
             <img onclick="openModal(this);" id="myImg" class="float-left p-2" src="/bg.jpg" alt="Snow" height="150" />
             <div id="myModal" class="modal">
                 <span class="close">&times;</span>

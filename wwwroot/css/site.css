@@ -23,7 +23,9 @@ for details on configuring this project to bundle and minify static web assets. 
     margin: auto;
     padding: 10px;
     border-radius: 4px;
-    max-width: 300px;
+    /*max-width: 300px;*/
+    width: fit-content;
+    height: fit-content;
 }
 
 .ModalOpen {
@@ -48,8 +50,8 @@ for details on configuring this project to bundle and minify static web assets. 
     }
 
 .is-blurred {
-    filter: blur(1px);
-    -webkit-filter: blur(1px);
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
 }
 
 .is-visuallyHidden {
