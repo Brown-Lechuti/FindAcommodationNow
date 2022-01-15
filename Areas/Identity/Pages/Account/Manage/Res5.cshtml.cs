@@ -12,7 +12,7 @@ using Microsoft.WindowsAzure.Storage.Blob;
 
 namespace FindAcommodationNow.Areas.Identity.Pages.Account.Manage
 {
-    public class PicturesModel : PageModel
+    public class Res5Model : PageModel
     {
 
         public void OnGet()
@@ -56,7 +56,7 @@ namespace FindAcommodationNow.Areas.Identity.Pages.Account.Manage
 
 
         [BindProperty]
-        public List<string> ImageList { get; set; }
+        public List<string> ImageList5 { get; set; }
         public async Task<IActionResult> OnPostAsync()
         {
             string userid = User.Identity.Name;
@@ -76,7 +76,7 @@ namespace FindAcommodationNow.Areas.Identity.Pages.Account.Manage
             continuationToken = result.ContinuationToken;
             var images = result.Results.ToList();
 
-            ImageList = new List<string>();
+            ImageList5 = new List<string>();
 
             foreach (var blobItem in images)
             {
@@ -84,7 +84,7 @@ namespace FindAcommodationNow.Areas.Identity.Pages.Account.Manage
                 var blob = (CloudBlockBlob)blobItem;
                 /// blob.Properties.ContentType = "image/jpeg";
                 _ = blob.SetPropertiesAsync();
-                ImageList.Add($"{blob.Uri}");
+                ImageList5.Add($"{blob.Uri}");
 
             }
 

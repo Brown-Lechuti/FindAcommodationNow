@@ -1,25 +1,23 @@
 ﻿@page
-@model PicturesModel
+@model Res4Model
 @{
-    ViewData["Title"] = "Residence 5";
-    ViewData["ActivePage"] = ManageNavPages.Pictures;
+    ViewData["Title"] = "Residence 4";
+    ViewData["ActivePage"] = ManageNavPages.Res4;
 } 
 
 <div style="background-color:white">
-    <h4>@ViewData["Title"]</h4>
+    <h5>@ViewData["Title"]</h5>
     <form>
-        <button class="btn btn-primary" type="submit" asp-page="Residence">&lArr; Go back</button>
+        <button class="btn btn-primary" type="submit"><i class="fa fa-check-square-o"> </i>Apply</button>
+        <button class="btn btn-primary" type="submit" asp-page="Residence" style="float: right;"><i class="fa fa-arrow-left"></i> Go back</button>
     </form>
-    <h6>Residence 5 pictures</h6>
+    <hr />
     <div class="top-navbar">
-
         <div class="row">
-
-        <!--@*@foreach (var items in Model.ImageList)
+        <!--@*@foreach (var items in Model.ImageList4)
                 {
                     var iPhotoUrl = items;
                     <img onclick="openModal(this);" id="myImg"  class="float-left p-2" src="@iPhotoUrl" alt="Snow" height="150"/>
-
                     <div id="myModal" class="modal">
                         <span class="close">&times;</span>
                         <img class="modal-content" id="img01">

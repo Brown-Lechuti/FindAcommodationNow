@@ -3,11 +3,22 @@
 @{
     ViewData["Title"] = "Home";
 }
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
 
 <div class="text-center">
-    <h2 class="display-4">Find Accomodation Now</h2>
-    <p>Register or log in to apply to your favourite private student accomodation in Vaal</p>
+     
+    <h2 class="display-4">&fnof;ind &Auml;ccomodation &Ntilde;ow</h2>
+    @if (SignInManager.IsSignedIn(User))
+    {
+        <p style="font-style:italic">&hearts; Welcome, we wish you well on your student life at the res of your choice &hearts;</p>
+    }
+    else
+    {
+        <p style="font-style:italic">Register or log in to apply to your favourite private student accomodation in Vaal</p>
+    }
 </div>
 <div class="text-center">
-    <img src="~/bg.jpg" alt="image of students" width="400" height="435" title="Students"/>@*Add picture of students at home page*@
+    <img style="border-radius:1%" src="bg.jpg" alt="image of students" width="400" height="435" title="Students"/>
 </div>

@@ -9,9 +9,14 @@ namespace FindAcommodationNow.Areas.Identity.Pages.Account.Manage
     public static class ManageNavPages
     {
         public static string Residence => "Residence";
-        //
-        public static string Pictures => "Pictures";
-        //
+        public static string Res1 => "Res1";
+        public static string Res2 => "Res2";
+        public static string Res3 => "Res3";
+        public static string Res4 => "Res4";
+        public static string Res5 => "Res4";
+        /// <summary>
+        /// //////////////////////
+        /// </summary>
         public static string Index => "Index";
 
         public static string Email => "Email";
@@ -29,7 +34,11 @@ namespace FindAcommodationNow.Areas.Identity.Pages.Account.Manage
         public static string TwoFactorAuthentication => "TwoFactorAuthentication";
         //
         public static string ResidenceNavClass(ViewContext viewContext) => PageNavClass(viewContext, Residence);
-        public static string PicturesNavClass(ViewContext viewContext) => PageNavClass(viewContext, Pictures);
+        public static string Res1NavClass(ViewContext viewContext) => PageNavClass(viewContext, Res1);
+        public static string Res2NavClass(ViewContext viewContext) => PageNavClass(viewContext, Res2);
+        public static string Res3NavClass(ViewContext viewContext) => PageNavClass(viewContext, Res3);
+        public static string Res4NavClass(ViewContext viewContext) => PageNavClass(viewContext, Res4);
+        public static string Res5NavClass(ViewContext viewContext) => PageNavClass(viewContext, Res5);
         //
         public static string IndexNavClass(ViewContext viewContext) => PageNavClass(viewContext, Index);
 

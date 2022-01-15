@@ -3,10 +3,10 @@
 
 // Write your JavaScript code.
 /*
-var modal = document.getElementById("myModal_"),
+var modal = document.getElementById("_myModal"),
 body = document.getElementsByTagName("body"),
 container = document.getElementById("myContainer"),
-btnOpen = document.getElementById("myBtn"), btnClose = document.getElementById("closeModal");
+btnOpen = document.getElementById("btnApply"), btnClose = document.getElementById("closeModal");
 btnOpen.onclick = function ()
 {
     modal.className = "Modal is-visuallyHidden", setTimeout(function ()
@@ -108,7 +108,7 @@ function funcPass()
 // Get the modal
 
 
-var modal = document.getElementById("myModal");
+var _modal = document.getElementById("myModal");
 
 var modalImg = document.getElementById("img01");
 var captionText = document.getElementById("caption");
@@ -123,12 +123,43 @@ var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function () {
-    modal.style.display = "none";
+    _modal.style.display = "none";
 }
 
 function openModal(img) {
-    modal.style.display = "block";
+    _modal.style.display = "block";
     modalImg.src = img.src;
     captionText.innerHTML = activeTab();
 
+}
+/*Javascript for the form modal */
+//Get the modal
+var modal = document.getElementById("_myModal");
+
+// Get the main container and the body
+var body = document.getElementsByTagName("body");
+var container = document.getElementById("myContainer");
+
+// Get the open button
+var btnOpen = document.getElementById("btnApply");
+
+// Get the close button
+var btnClose = document.getElementById("closeModal");
+
+// Open the modal
+btnOpen.onclick = function () {
+    modal.className = "Modal is-visuallyHidden";
+    setTimeout(function () {
+        container.className = "MainContainer ";
+        modal.className = "Modal";
+    }, 100);
+    container.parentElement.className = "ModalOpen";
+}
+
+// Close the modal
+btnClose.onclick = function () {
+    modal.className = "Modal is-hidden is-visuallyHidden";
+    body.className = "";
+    container.className = "MainContainer";
+    container.parentElement.className = "";
 }

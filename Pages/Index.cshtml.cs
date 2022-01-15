@@ -16,7 +16,6 @@ namespace FindAcommodationNow.Pages
         {
             _logger = logger;
         }
-
         public void OnGet()
         {
 
