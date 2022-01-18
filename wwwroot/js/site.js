@@ -164,6 +164,15 @@ btnClose.onclick = function () {
     container.parentElement.className = "";
 }
 
+/*var smallCol = document.getElementById("smallCol");
+var bigCol = document.getElementById("bigCol");
+function arrangeCols() {
+    bigCol.className = "col-md-7";
+    smallCol.hidden = false;
+}
+function display() {
+    smallCol.hidden = false;
+}*/
 /*function growSize(icon) {
     icon.size 
 }*/

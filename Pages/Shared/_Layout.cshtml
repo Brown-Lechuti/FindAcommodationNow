@@ -40,7 +40,7 @@
                     @if (SignInManager.IsSignedIn(User))
                     {
                         <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Residence" title="Residences"><i class="fas fa-bed fa-fw" aria-hidden="true"></i>&nbsp;Book now</a>
-                        <a class="nav-link text-dark"><i class="fa fa-user-circle fa-fw" aria-hidden="true"></i>&nbsp;@User.Identity.Name</a>
+                        <a class="nav-link text-dark"  asp-area="Identity" asp-page="/Account/Manage/PersonalData"><i class="fa fa-user-circle fa-fw" aria-hidden="true"></i>&nbsp;@User.Identity.Name</a>
                     }
                     else
                     {
@@ -55,12 +55,12 @@
                 @RenderBody()
             </main>
         </div>
-
+        
         <footer class="border-top footer text-muted" style="background-color:white">
             <div class="container">
-                <div class="row">
+                <div class="row" style="text-align:center">
                     <div class="col-md-6">
-                            &copy; 2022 -&fnof;ind&Auml;ccomodation&Ntilde;ow
+                            &copy; 2022 -&fnof;ind&Auml;ccomodation&Ntilde;ow-
                     </div>
                     <div class="col-md-6 col-md-offset-1">
                              Developed by Brown Lechuti@*-<a asp-area="" asp-page="/Privacy">Privacy</a>*@

@@ -16,6 +16,7 @@ for details on configuring this project to bundle and minify static web assets. 
     -webkit-transition: 0.5s;
     overflow: auto;
     transition: all 0.3s linear;
+    
 }
 
 .Modal-content {
@@ -93,9 +94,11 @@ html {
 
 .border-top {
   border-top: 1px solid #e5e5e5;
+  border-top-color:silver;
 }
 .border-bottom {
-  border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    border-top-color: silver;
 }
 
 .box-shadow {
@@ -117,15 +120,15 @@ html {
 
 body {
     /* Margin bottom by footer height */
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     
 }
 .footer {
-  /*position:absolute;*/
-  bottom:0;
- /* width: 100%;*/
-  white-space: nowrap;
-  line-height: 20px; /* Vertically center the text there */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: normal;
+    line-height: 25px; /* Vertically center the text there */
 }
 /*.btn {
     width: 150px;
