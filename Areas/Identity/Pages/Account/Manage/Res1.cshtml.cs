@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -14,33 +16,17 @@ namespace FindAcommodationNow.Areas.Identity.Pages.Account.Manage
 {
     public class Res1Model : PageModel
     {
+        private IConfiguration _configuration;
 
-        public void OnGet()
-        {
-        }
-        /*      public async Task<IActionResult> OnPostAsync()
-                {
-                    return Page();
-                }*/
-   /*    
-
- /*     private IConfiguration _configuration;
-        private readonly UserManager<IdentityUser> _userManager;
-        private readonly SignInManager<IdentityUser> _signInManager;
-
-        public ResidenceModel(IConfiguration Configuration)
+        public Res1Model(IConfiguration Configuration)
         {
             _configuration = Configuration;
         }
 
-
         [BindProperty]
-        public List<string> ImageList1 { get; set; }
-        public async Task<IActionResult> OnPostAsync()
+        public List<string> ImageList { get; set; }
+        public async Task<IActionResult> OnGetAsync()
         {
-            string userid = User.Identity.Name;
-            string newString = userid.Replace("@", string.Empty);
-
             string uniqueContiner_ = "brownlechutigmailcom";
 
             BlobContinuationToken continuationToken = null;
@@ -55,21 +41,20 @@ namespace FindAcommodationNow.Areas.Identity.Pages.Account.Manage
             continuationToken = result.ContinuationToken;
             var images = result.Results.ToList();
 
-            ImageList1 = new List<string>();
+            ImageList = new List<string>();
 
             foreach (var blobItem in images)
             {
                 // A flat listing operation returns only blobs, not virtual directories.
                 var blob = (CloudBlockBlob)blobItem;
-                /// blob.Properties.ContentType = "image/jpeg";
+                blob.Properties.ContentType = "image/jpeg";
                 _ = blob.SetPropertiesAsync();
-                ImageList1.Add($"{blob.Uri}");
+                ImageList.Add($"{blob.Uri}");
 
             }
 
             return Page();
-        }*/
-
+        }
 
     }
 }
