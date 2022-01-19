@@ -19,79 +19,77 @@ namespace FindAcommodationNow.Areas.Identity.Pages.Account.Manage
         public void OnGet()
         {
         }
+
         /*        public async Task<IActionResult> OnPostAsync()
                 {
                     return Page();
                 }*/
-   /*     private void MBtn_Click(object sender, EventArgs e)
-        { 
+        /*     private void MBtn_Click(object sender, EventArgs e)
+             { 
 
-        }
-        private string SelectedRes() 
-        {
-            string resContainer = "";
-            var res = Request.Form["res"];
-           // var n = Request.Form["mBtn"];
-            resContainer = res.ToString();
-            
-            return resContainer;
-        }*/
-/*        private void CallContainer(string resName,string picCategory)
-        {
-            string containerCalled = resName + picCategory;
+             }
+             private string SelectedRes() 
+             {
+                 string resContainer = "";
+                 var res = Request.Form["res"];
+                // var n = Request.Form["mBtn"];
+                 resContainer = res.ToString();
+
+                 return resContainer;
+             }*/
+        /*        private void CallContainer(string resName,string picCategory)
+                {
+                    string containerCalled = resName + picCategory;
 
 
-        }*/
+                }*/
         //
 
 
 
- /*     private IConfiguration _configuration;
-        private readonly UserManager<IdentityUser> _userManager;
-        private readonly SignInManager<IdentityUser> _signInManager;
+        /* private IConfiguration _configuration;
+         private readonly UserManager<IdentityUser> _userManager;
+         private readonly SignInManager<IdentityUser> _signInManager;
 
-        public ResidenceModel(IConfiguration Configuration)
-        {
-            _configuration = Configuration;
-        }
+         public ResidenceModel(IConfiguration Configuration)
+         {
+             _configuration = Configuration;
+         }
 
+         [BindProperty]
+         public List<string> ImageList_ { get; set; }
+         public async Task<IActionResult> OnGetAsync()
+         {
+             string userid = User.Identity.Name;
+             string newString = userid.Replace("@", string.Empty);
 
-        [BindProperty]
-        public List<string> ImageList { get; set; }
-        public async Task<IActionResult> OnPostAsync()
-        {
-            string userid = User.Identity.Name;
-            string newString = userid.Replace("@", string.Empty);
+             string uniqueContiner_ = "brownlechutigmailcom";
 
-            string uniqueContiner_ = "brownlechutigmailcom";
+             BlobContinuationToken continuationToken = null;
+             string blobstorageconnection = "DefaultEndpointsProtocol=https;AccountName=storebbl;AccountKey=0i1Fv/O3avNyTTehyTKqGcQjmuyivvDT6H9gNCx8dCmIZGNfPIqCeoIPANXTDW+WuvFqoq3pEGnjyFW7eKtmzA==;EndpointSuffix=core.windows.net";
 
-            BlobContinuationToken continuationToken = null;
-            string blobstorageconnection = "DefaultEndpointsProtocol=https;AccountName=storebbl;AccountKey=0i1Fv/O3avNyTTehyTKqGcQjmuyivvDT6H9gNCx8dCmIZGNfPIqCeoIPANXTDW+WuvFqoq3pEGnjyFW7eKtmzA==;EndpointSuffix=core.windows.net";
+             CloudStorageAccount cloudStorageAccount = CloudStorageAccount.Parse(blobstorageconnection);
+             CloudBlobClient blobClient = cloudStorageAccount.CreateCloudBlobClient();
+             CloudBlobContainer container = blobClient.GetContainerReference(uniqueContiner_);
 
-            CloudStorageAccount cloudStorageAccount = CloudStorageAccount.Parse(blobstorageconnection);
-            CloudBlobClient blobClient = cloudStorageAccount.CreateCloudBlobClient();
-            CloudBlobContainer container = blobClient.GetContainerReference(uniqueContiner_);
+             var blobs = blobClient.GetContainerReference(uniqueContiner_).ListBlobsSegmentedAsync(continuationToken);
+             var result = blobs.Result;
+             continuationToken = result.ContinuationToken;
+             var images = result.Results.ToList();
 
-            var blobs = blobClient.GetContainerReference(uniqueContiner_).ListBlobsSegmentedAsync(continuationToken);
-            var result = blobs.Result;
-            continuationToken = result.ContinuationToken;
-            var images = result.Results.ToList();
+             ImageList_ = new List<string>();
 
-            ImageList = new List<string>();
+             foreach (var blobItem in images)
+             {
+                 // A flat listing operation returns only blobs, not virtual directories.
+                 var blob = (CloudBlockBlob)blobItem;
+                 /// blob.Properties.ContentType = "image/jpeg";
+                 _ = blob.SetPropertiesAsync();
+                 ImageList_.Add($"{blob.Uri}");
 
-            foreach (var blobItem in images)
-            {
-                // A flat listing operation returns only blobs, not virtual directories.
-                var blob = (CloudBlockBlob)blobItem;
-                /// blob.Properties.ContentType = "image/jpeg";
-                _ = blob.SetPropertiesAsync();
-                ImageList.Add($"{blob.Uri}");
-
-            }
-
-            return Page();
-        }*/
-
+             }
+             return Page();
+         }*/
 
     }
 }

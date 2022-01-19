@@ -15,41 +15,11 @@ namespace FindAcommodationNow.Areas.Identity.Pages.Account.Manage
     public class Res4Model : PageModel
     {
 
-        public void OnGet()
-        {
-        }
-        /*        public async Task<IActionResult> OnPostAsync()
-                {
-                    return Page();
-                }*/
-   /*     private void MBtn_Click(object sender, EventArgs e)
-        { 
-
-        }
-        private string SelectedRes() 
-        {
-            string resContainer = "";
-            var res = Request.Form["res"];
-           // var n = Request.Form["mBtn"];
-            resContainer = res.ToString();
-            
-            return resContainer;
-        }*/
-/*        private void CallContainer(string resName,string picCategory)
-        {
-            string containerCalled = resName + picCategory;
-
-
-        }*/
-        //
-
-
-
- /*     private IConfiguration _configuration;
+        private IConfiguration _configuration;
         private readonly UserManager<IdentityUser> _userManager;
         private readonly SignInManager<IdentityUser> _signInManager;
 
-        public ResidenceModel(IConfiguration Configuration)
+        public Res4Model(IConfiguration Configuration)
         {
             _configuration = Configuration;
         }
@@ -89,7 +59,7 @@ namespace FindAcommodationNow.Areas.Identity.Pages.Account.Manage
             }
 
             return Page();
-        }*/
+        }
 
 
     }

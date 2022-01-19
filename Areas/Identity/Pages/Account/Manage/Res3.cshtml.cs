@@ -14,27 +14,14 @@ namespace FindAcommodationNow.Areas.Identity.Pages.Account.Manage
 {
     public class Res3Model : PageModel
     {
-
-        public void OnGet()
-        {
-        }
-        /*        public async Task<IActionResult> OnPostAsync()
-                {
-                    return Page();
-                }*/
-
-
-
-
- /*     private IConfiguration _configuration;
+        private IConfiguration _configuration;
         private readonly UserManager<IdentityUser> _userManager;
         private readonly SignInManager<IdentityUser> _signInManager;
 
-        public ResidenceModel(IConfiguration Configuration)
+        public Res3Model(IConfiguration Configuration)
         {
             _configuration = Configuration;
         }
-
 
         [BindProperty]
         public List<string> ImageList3 { get; set; }
@@ -67,8 +54,7 @@ namespace FindAcommodationNow.Areas.Identity.Pages.Account.Manage
 
             }
             return Page();
-        }*/
-
+        }
 
     }
 }

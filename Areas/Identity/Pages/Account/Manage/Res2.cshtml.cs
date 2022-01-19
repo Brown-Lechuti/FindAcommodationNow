@@ -43,13 +43,11 @@ namespace FindAcommodationNow.Areas.Identity.Pages.Account.Manage
         }*/
         //
 
-
-
- /*     private IConfiguration _configuration;
+        private IConfiguration _configuration;
         private readonly UserManager<IdentityUser> _userManager;
         private readonly SignInManager<IdentityUser> _signInManager;
 
-        public ResidenceModel(IConfiguration Configuration)
+        public Res2Model(IConfiguration Configuration)
         {
             _configuration = Configuration;
         }
@@ -86,7 +84,7 @@ namespace FindAcommodationNow.Areas.Identity.Pages.Account.Manage
             }
 
             return Page();
-        }*/
+        }
 
 
     }

@@ -1,9 +1,7 @@
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -17,6 +15,8 @@ namespace FindAcommodationNow.Areas.Identity.Pages.Account.Manage
     public class Res1Model : PageModel
     {
         private IConfiguration _configuration;
+        private readonly UserManager<IdentityUser> _userManager;
+        private readonly SignInManager<IdentityUser> _signInManager;
 
         public Res1Model(IConfiguration Configuration)
         {
@@ -25,8 +25,10 @@ namespace FindAcommodationNow.Areas.Identity.Pages.Account.Manage
 
         [BindProperty]
         public List<string> ImageList { get; set; }
-        public async Task<IActionResult> OnGetAsync()
+        public async Task<IActionResult> OnPostAsync()
         {
+            string userid = User.Identity.Name;
+            string newString = userid.Replace("@", string.Empty);
             string uniqueContiner_ = "brownlechutigmailcom";
 
             BlobContinuationToken continuationToken = null;
@@ -47,14 +49,11 @@ namespace FindAcommodationNow.Areas.Identity.Pages.Account.Manage
             {
                 // A flat listing operation returns only blobs, not virtual directories.
                 var blob = (CloudBlockBlob)blobItem;
-                blob.Properties.ContentType = "image/jpeg";
+                /// blob.Properties.ContentType = "image/jpeg";
                 _ = blob.SetPropertiesAsync();
                 ImageList.Add($"{blob.Uri}");
-
             }
-
             return Page();
         }
-
     }
 }

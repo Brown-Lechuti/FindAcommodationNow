@@ -25,37 +25,18 @@
         <button class="btn btn-primary" type="submit" asp-page="Residence"><i class="fa fa-arrow-left"></i> Go back</button>
     </form>
     <hr />
-    <div class="top-navbar">
-        <div class="row">
-            <!--@*@foreach (var items in Model.ImageList2)
-                    {
-                        var iPhotoUrl = items;
-                        <img onclick="openModal(this);" id="myImg"  class="float-left p-2" src="@iPhotoUrl" alt="Snow" height="150"/>
-
-                        <div id="myModal" class="modal">
-                            <span class="close">&times;</span>
-                            <img class="modal-content" id="img01">
-                            <div id="caption"></div>
-                        </div>
-
-                    }*@-->
-            <img onclick="openModal(this);" id="myImg" class="float-left p-2" src="/bg.jpg" alt="Snow" height="150" />
-            <div id="myModal" class="modal">
-                <span class="close">&times;</span>
-                <img class="modal-content" id="img01">
-                <div id="caption"></div>
-            </div>
-            <img onclick="openModal(this);" id="myImg" class="float-left p-2" src="/352.jpg" alt="Snow" height="150" />
-            <img onclick="openModal(this);" id="myImg" class="float-left p-2" src="/389.png" alt="Snow" height="150" />
-            <img onclick="openModal(this);" id="myImg" class="float-left p-2" src="/683.jpg" alt="Snow" height="150" />
-            <img onclick="openModal(this);" id="myImg" class="float-left p-2" src="/456.jpg" alt="Snow" height="150" />
-
+ 
+       <div class="top-navbar">
+            @foreach (var items in Model.ImageList2)
+            {
+                var iPhotoUrl = items;
+                <img onclick="openModal(this);" id="myImg" class="float-left p-2" src="@iPhotoUrl" alt="Snow" height="150" />
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01">
+                    <div id="caption"></div>
+                </div>
+            }
         </div>
 
-    </div>
-
-
-</div>
-@section Scripts {
-<partial name="_ValidationScriptsPartial" />
-}
+ </div>
