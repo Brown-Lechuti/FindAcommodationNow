@@ -7,18 +7,22 @@
 @inject SignInManager<IdentityUser> SignInManager
 @inject UserManager<IdentityUser> UserManager
 
-<div class="text-center">
-     
-    <h2 class="display-4" >&fnof;ind &Auml;ccomodation &Ntilde;ow</h2>
+<div class="text-center" style="border-radius: 15%;background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('010.jpg'); height: 100%; width: 100%; background-position: center; background-repeat: no-repeat; background-size: cover; position: center;">
+
+    <h2 class="text-center display-4" style="font-family: Arial, Helvetica, sans-serif; color: white;">&fnof;ind &Auml;ccomodation &Ntilde;ow</h2>
     @if (SignInManager.IsSignedIn(User))
     {
-        <p style="font-style:italic"> Welcome<span class="imoji" style="font-style:normal">🤗</span>, we wish you well on your student life<span class="imoji_" style="font-style:normal">💃</span> at the <a asp-area="Identity" asp-page="/Account/Manage/Residence">res</a> of your choice!</p>
+        <p style="color: white;">Welcome<span class="imoji" style="font-style:normal">🤗</span>, we wish you well on your student life<span class="imoji_" style="font-style:normal">💃</span> at the <a asp-area="Identity" asp-page="/Account/Manage/Residence">res</a> of your choice!</p>
     }
     else
     {
-        <p style="font-style:italic">Register or log in to apply to your favourite private student accomodation in Vaal</p>
+        <p style=" color: white;">Register or log in to apply to your favourite private student accomodation in Vaal</p>
     }
-</div>
 <div class="text-center">
-    <img style="border-radius:1%" src="bg.jpg" alt="image of students" width="400" height="435" title="Students"/>
 </div>
+
+</div>
+<!--<div class="text-center">-->
+   @* <img style="border-radius:1%" src="bg.jpg" alt="image of students" width="400" height="435" title="Students" />*@
+<!--</div>-->
+
