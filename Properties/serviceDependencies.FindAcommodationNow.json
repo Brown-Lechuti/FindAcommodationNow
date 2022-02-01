@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "storage1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Storage/storageAccounts/storebbl",
+      "type": "storage.azure",
+      "connectionId": "ConnectionStrings:DefaultConnection",
+      "secretStore": null
+    },
+    "mssql2": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/project-marketdbserver/databases/FindAcommodationNow_db",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:FindAcommodationNowContextConnection",
+      "secretStore": "AzureAppSettings"
+    }
+  }
+}
