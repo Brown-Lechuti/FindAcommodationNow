@@ -19,10 +19,10 @@
       "secretStore": "AzureAppSettings"
     },
     "secrets1": {
-      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.KeyVault/vaults/FindAcommodationNowvault",
-      "type": "secrets.keyVault",
-      "connectionId": "VaultUri",
-      "secretStore": "AzureAppSettings"
+      "type": "secrets",
+      "connectionId": "",
+      "suggestion": "true",
+      "ignored": "true"
     }
   }
 }

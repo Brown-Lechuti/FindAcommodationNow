@@ -11,10 +11,6 @@
     "mssql1": {
       "type": "mssql",
       "connectionId": "fanConnect"
-    },
-    "secrets1": {
-      "type": "secrets",
-      "connectionId": "VaultUri"
     }
   }
 }
