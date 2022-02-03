@@ -13,9 +13,15 @@
       "ignored": "true"
     },
     "mssql1": {
+      "type": "mssql",
+      "connectionId": "ConnectionStrings:FindAcommodationNowContextConnection",
+      "suggestion": "true",
+      "ignored": "true"
+    },
+    "mssql2": {
       "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/project-marketdbserver/databases/FindAcommodationNow_db",
       "type": "mssql.azure",
-      "connectionId": "ConnectionStrings:FindAcommodationNowContextConnection",
+      "connectionId": "ConnectionString",
       "secretStore": "AzureAppSettings"
     }
   }

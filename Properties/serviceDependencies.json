@@ -4,9 +4,9 @@
       "type": "storage",
       "connectionId": "ConnectionStrings:DefaultConnection"
     },
-    "mssql1": {
+    "mssql2": {
       "type": "mssql",
-      "connectionId": "ConnectionStrings:FindAcommodationNowContextConnection"
+      "connectionId": "ConnectionString"
     }
   }
 }
