@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "+6mCbmHFKxLXfIz+VK4LfoyDhXHP4LDVaxm2xfK3n4GfuQ/Ze5rLU9hKDoXxK9Y7NA33Rf9nHZioVL+6z0OLcA==",
+  "dgSpecHash": "6PdbsaP95PJHHQr5vxau8rN+x1/SzBts5ymThya4a75oQFmhxUHEGmz8fwGpBiFjsVXS+4PttWb8YkdFoeKHmA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Lenovo Pc\\source\\repos\\FindAcommodationNow\\FindAcommodationNow.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,7 @@
     "C:\\Users\\Lenovo Pc\\.nuget\\packages\\azure.storage.common\\12.2.0\\azure.storage.common.12.2.0.nupkg.sha512",
     "C:\\Users\\Lenovo Pc\\.nuget\\packages\\azure.storage.files.shares\\12.1.0\\azure.storage.files.shares.12.1.0.nupkg.sha512",
     "C:\\Users\\Lenovo Pc\\.nuget\\packages\\azure.storage.queues\\12.2.0\\azure.storage.queues.12.2.0.nupkg.sha512",
+    "C:\\Users\\Lenovo Pc\\.nuget\\packages\\fontawesome\\4.7.0\\fontawesome.4.7.0.nupkg.sha512",
     "C:\\Users\\Lenovo Pc\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Lenovo Pc\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.12\\microsoft.aspnetcore.cryptography.internal.5.0.12.nupkg.sha512",
     "C:\\Users\\Lenovo Pc\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.12\\microsoft.aspnetcore.cryptography.keyderivation.5.0.12.nupkg.sha512",
