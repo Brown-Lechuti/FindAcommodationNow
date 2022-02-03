@@ -1,9 +1,5 @@
 {
   "dependencies": {
-    "mssql2": {
-      "type": "mssql",
-      "connectionId": "ConnectionString"
-    },
     "mssql1": {
       "type": "mssql",
       "connectionId": "ConnectionStrings:FindAcommodationNowContextConnection"
@@ -11,6 +7,10 @@
     "storage1": {
       "type": "storage",
       "connectionId": "ConnectionStrings:DefaultConnection"
+    },
+    "mssql2": {
+      "type": "mssql",
+      "connectionId": "ConnectionString"
     }
   }
 }
