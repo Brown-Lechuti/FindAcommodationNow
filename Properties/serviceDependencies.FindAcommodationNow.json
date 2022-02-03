@@ -6,23 +6,17 @@
       "connectionId": "ConnectionStrings:DefaultConnection",
       "secretStore": null
     },
-    "mssql2": {
-      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/project-marketdbserver/databases/FindAcommodationNow_db",
-      "type": "mssql.azure",
-      "connectionId": "ConnectionStrings:FindAcommodationNowContextConnection",
-      "secretStore": "AzureAppSettings"
-    },
-    "mssql1": {
-      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/project-marketdbserver/databases/FindAcommodationNow_db",
-      "type": "mssql.azure",
-      "connectionId": "fanConnect",
-      "secretStore": "AzureAppSettings"
-    },
     "secrets1": {
       "type": "secrets",
       "connectionId": "",
       "suggestion": "true",
       "ignored": "true"
+    },
+    "mssql1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/project-marketdbserver/databases/FindAcommodationNow_db",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:FindAcommodationNowContextConnection",
+      "secretStore": "AzureAppSettings"
     }
   }
 }
