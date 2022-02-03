@@ -15,7 +15,7 @@ namespace FindAcommodationNow.Areas.Identity
                 builder.ConfigureServices((context, services) => {
                     services.AddDbContext<FindAcommodationNowContext>(options =>
                         options.UseSqlServer(
-                            context.Configuration.GetConnectionString("DefaultConnection"),
+                            context.Configuration.GetConnectionString("FindAcommodationNowConnection"),
                     sqlServerOptionsAction: sqlOptions =>
                     {
                         sqlOptions.EnableRetryOnFailure();
