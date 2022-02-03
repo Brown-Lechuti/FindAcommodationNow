@@ -1,12 +1,12 @@
-name: Build and deploy .NET Core app to Windows WebApp ProjectMarket
+name: Build and deploy .NET Core app to Windows WebApp findaccommodationnow
 on:
   push:
     branches:
     - master
 env:
-  AZURE_WEBAPP_NAME: ProjectMarket
+  AZURE_WEBAPP_NAME: findaccommodationnow
   AZURE_WEBAPP_PACKAGE_PATH: ./publish
-  AZURE_WEBAPP_PUBLISH_PROFILE: ${{ secrets.ProjectMarket_c6ca }}
+  AZURE_WEBAPP_PUBLISH_PROFILE: ${{ secrets.findaccommodationnow_c3f8 }}
   CONFIGURATION: Release
   DOTNET_CORE_VERSION: 5.0.x
   WORKING_DIRECTORY: .
