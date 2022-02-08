@@ -38,6 +38,8 @@
           "Azure.Storage.Blobs": "12.3.0",
           "Azure.Storage.Files.Shares": "12.1.0",
           "Azure.Storage.Queues": "12.2.0",
+          "Font.Awesome": "5.15.4",
+          "FontAwesome": "4.7.0",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "5.0.11",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.12",
           "Microsoft.AspNetCore.Identity.UI": "5.0.12",
@@ -463,6 +465,8 @@
           "lib/netstandard2.0/Azure.Storage.Queues.dll": {}
         }
       },
+      "Font.Awesome/5.15.4": {},
+      "FontAwesome/4.7.0": {},
       "Humanizer.Core/2.8.26": {
         "runtime": {
           "lib/netstandard2.0/Humanizer.dll": {
@@ -4342,6 +4346,20 @@
       "sha512": "sha512-i78L7cu95JZPKHvRPA/Xnom7bVyxbnsn/KtFdKnRwaBRUhnuM7xPBTzpReZB7+gw4i6s1VJDSbD2xLJXKi+XNg==",
       "path": "azure.storage.queues/12.2.0",
       "hashPath": "azure.storage.queues.12.2.0.nupkg.sha512"
+    },
+    "Font.Awesome/5.15.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Okg91rA7RWbd+eKyBNNnvlvzFee7A4yIi0WdTrJMVPos1ntONAVn/m96Ex9qvVXKKiroBZ1vtCXtpFMnHNof1g==",
+      "path": "font.awesome/5.15.4",
+      "hashPath": "font.awesome.5.15.4.nupkg.sha512"
+    },
+    "FontAwesome/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-n4H/brfszElyoZ4kmGh8E75uqvLzLvFr3h2PFVdPH1LwUmWIpeqdaW2pcC4oZAhg7sESyObh0IZpAI8COCNeUg==",
+      "path": "fontawesome/4.7.0",
+      "hashPath": "fontawesome.4.7.0.nupkg.sha512"
     },
     "Humanizer.Core/2.8.26": {
       "type": "package",
